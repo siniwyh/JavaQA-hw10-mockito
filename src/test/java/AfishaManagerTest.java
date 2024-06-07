@@ -1,8 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.security.PublicKey;
-
 public class AfishaManagerTest {
 
     AfishaManager manager = new AfishaManager();
@@ -14,7 +12,7 @@ public class AfishaManagerTest {
     String film6 = "sixth";
     String film7 = "seventh";
     String film8 = "eighth";
-    
+
 
     @Test
     public void shouldFindAll() {
