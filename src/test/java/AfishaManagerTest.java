@@ -30,7 +30,39 @@ public class AfishaManagerTest {
     }
 
     @Test
-    public void shouldFindLastWithStandardLimit() {
+    public void shouldFindLastIfLessThenLimit() {
+
+        AfishaManager manager = new AfishaManager();
+
+        manager.add(film1);
+        manager.add(film2);
+        manager.add(film3);
+
+        String[] expected = {film3, film2, film1};
+        String[] actual = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldFindLastIfEqualsLimit() {
+
+        AfishaManager manager = new AfishaManager();
+
+        manager.add(film1);
+        manager.add(film2);
+        manager.add(film3);
+        manager.add(film4);
+        manager.add(film5);
+
+        String[] expected = {film5, film4, film3, film2, film1};
+        String[] actual = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldFindLastIfMoreThenLimit() {
 
         AfishaManager manager = new AfishaManager();
 
